@@ -32,8 +32,8 @@ const FullScreenOverlay = styled.div`
 `;
 
 const Spinner = styled.div<{ size: number }>`
-    border: ${({ size }) => size / 8}px solid #3c4c76;
-    border-top: ${({ size }) => size / 8}px solid #1d7fb6;
+    border: ${({ size }) => size / 8}px solid #202328;
+    border-top: ${({ size }) => size / 8}px solid #b1b3b4;
     border-radius: 50%;
     width: ${({ size }) => size}px;
     height: ${({ size }) => size}px;

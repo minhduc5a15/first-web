@@ -41,6 +41,10 @@ body {
     color: #e2e2e2;
 }
 
+.bg-reaction-box {
+    background: linear-gradient(45deg, #191a1b, transparent);;
+}
+
 .shadow {
     box-shadow: 0 0 10px #353535;
 }

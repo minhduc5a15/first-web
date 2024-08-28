@@ -1,11 +1,8 @@
 'use client';
 
 import { useStore as use } from 'zustand';
-
 import { createContext, type ReactNode, useContext, useEffect, useRef } from 'react';
-
 import { createStore, Store } from '@/lib/stores/store';
-
 import { db } from '@/lib/firebase/db';
 
 export type StoreApi = ReturnType<typeof createStore>;
