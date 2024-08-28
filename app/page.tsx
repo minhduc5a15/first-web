@@ -8,7 +8,7 @@ import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Page = () => {
-    const { currentLike, liked, setCurrentLike, increment, decrement, toggleLike } = useStore((state) => state);
+    const { currentLike, liked, setCurrentLike, toggleLike } = useStore((state) => state);
 
     const onClick = async () => {
         if (!liked) {
@@ -40,8 +40,8 @@ const Page = () => {
                     <span
                         title={'click to copy'}
                         className="default-color cursor-pointer"
-                        onClick={() => {
-                            navigator.clipboard.writeText('231230750');
+                        onClick={async () => {
+                            await navigator.clipboard.writeText('231230750');
                         }}
                     >
                         231230750
@@ -53,9 +53,9 @@ const Page = () => {
                     <div className="w-20 h-20 flex-center">
                         <LikeButton
                             className="ml-3"
-                            onClick={() => {
+                            onClick={async () => {
                                 toggleLike();
-                                onClick();
+                                await onClick();
                             }}
                             $liked={liked}
                         />

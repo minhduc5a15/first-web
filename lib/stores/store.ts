@@ -9,8 +9,6 @@ export type State = {
 
 export type Actions = {
     setCurrentLike: (number: number) => void;
-    increment: () => void;
-    decrement: () => void;
     toggleLike: () => void;
 };
 
@@ -36,8 +34,6 @@ export const createStore = (initState: State = defaultInitStatt) => {
                         currentLike: value,
                     });
                 },
-                increment: () => set((state) => ({ currentLike: state.currentLike + 1 })),
-                decrement: () => set((state) => ({ currentLike: state.currentLike - 1 })),
                 toggleLike: () => set((state) => ({ liked: !state.liked })),
             }),
             {
