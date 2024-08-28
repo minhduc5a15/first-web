@@ -1,21 +1,12 @@
 'use client';
 
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import React from 'react';
 import { FaHeart } from 'react-icons/fa6';
 
 type LikeButtonProps = {
     $liked: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
-
-const fade = keyframes`
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.5);
-    }
-`;
 
 const Container = styled.button<LikeButtonProps>`
     width: 45px;
@@ -50,10 +41,7 @@ const Container = styled.button<LikeButtonProps>`
     }
 `;
 
-const LikeButton: React.FC<LikeButtonProps> = ({
-    $liked = false,
-    ...props
-}) => {
+const LikeButton: React.FC<LikeButtonProps> = ({ $liked = false, ...props }) => {
     return (
         <Container $liked={$liked} {...props}>
             <span>

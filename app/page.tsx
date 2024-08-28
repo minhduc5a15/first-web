@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { LikeButton } from '@/app/components';
+import { LikeButton, Loading } from '@/app/components';
 import { db } from '@/lib/firebase/db';
 import { useStore } from '@/lib/providers/provider';
 import { FaGithub } from 'react-icons/fa';
@@ -61,7 +61,7 @@ const Page = () => {
                         />
                     </div>
                     <div className="h-full flex-grow grid flex-center ">
-                        <span className="font-mono text-xl">{currentLike}</span>
+                        <span className="font-mono text-xl">{currentLike > 0 ? currentLike : <Loading />}</span>
                     </div>
                 </div>
                 <Link
